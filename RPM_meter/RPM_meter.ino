@@ -1,5 +1,5 @@
 /*
-The rpm sensor monitor the time elapsed between two adjacent magnet detection.
+The rpm sensor monitor the time elapsed between two adjacent magnet detections.
 The elapsed time is then converted to the revolution speed and display on both the serial port and the LCD.
 If there is no magnet being detected over a certain period of time, the rpm reading is set to zero.
 
@@ -32,14 +32,14 @@ float alpha = 0.2;  // \in[0,1] the gain for a low-pass filter
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(sensorPin, INPUT_PULLUP);
 
   // initialize the LCD
   lcd.begin();
-  // Turn on the blacklight and print a message.
+  // turn on the blacklight and print a message.
   lcd.backlight();
+  // prepare the LCD display
   lcd.setCursor(0, 0);
   lcd.print("Mag. Number: ");
   lcd.setCursor(13, 0);
@@ -66,13 +66,12 @@ void loop() {
     HZ_filtered = 0.0;
   }
 
-  // Apply a low-pass filter to the frequency reading and compute the RPM accordingly
+  // apply a low-pass filter to the frequency reading and compute the RPM accordingly
   HZ_filtered = alpha*HZ_now + (1-alpha)*HZ_filtered;
 
   float RPM = HZ_filtered * float(60);
 
   // display the RPM on the serial monitor at a specific interval
-  // this section may be altered with teh LCD display
   if (millis()-time_ref_display > display_interval*1000)
   {
     time_ref_display = millis();
