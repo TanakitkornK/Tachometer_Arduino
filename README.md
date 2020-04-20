@@ -9,7 +9,7 @@ RPM meter based on an arduino and a hall effect sensor.
 * Power Bank (power source for using the arduino independent from a computer)
 * 16x2 LCD display (display info.)
 
-This code detects magnet and compute the elapsed time between two magnet detections. The frequency in Hz is computed and converted into RPM. However, the RPM is set to zero if the magnet is not detected for over a period of time.
+This code detects a magnet and computes the elapsed time between two magnet detections. The frequency in Hz is computed and converted into RPM. However, the RPM is set to zero if the magnet is not detected for over a specified period of time.
 
 **The device can work in 2 modes:**
 * Connected to a computer and display the RPM reading on the serial monitor
