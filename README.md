@@ -15,7 +15,7 @@ This code detects a magnet and computes the elapsed time between two magnet dete
 
 **The device can work in 2 modes:**
 * Connected to a computer and display the RPM reading on the serial monitor
-* Used as a mobile device but this needs a powerbank and a LCD display
+* Used as a mobile device but this needs a power bank and a LCD display
 
 https://www.youtube.com/watch?v=_gb7JDY00mY
 
