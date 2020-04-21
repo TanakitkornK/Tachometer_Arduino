@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=_gb7JDY00mY
 
 **Components:**
 * Arduino Nano
-* Hall effect sensor (This project used A3144)
+* Hall effect sensor (this project used A3144)
 * Magnet (to be put on the rotating device as a marker)
 * Power bank (power source for using the arduino independently of a computer)
 * 16x2 LCD display (display info.)
