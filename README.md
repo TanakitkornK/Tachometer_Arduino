@@ -1,4 +1,4 @@
-# Tachometer_arduino
+# Tachometer_Arduino
 
 RPM meter based on an arduino and a hall effect sensor. With the default parameter setting running on Arduino Nano, the code is expected to work accurately in the range between 30 and 1200 RPM.
 
